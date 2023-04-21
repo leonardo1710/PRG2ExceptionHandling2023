@@ -32,6 +32,12 @@ public class App {
         // Step 1: Uncomment task5_readFile function. Instead of handling checked exceptions with try/catch declare possible exceptions in method signature
         // Step 2: Call task5_readFile("/file.txt") in main method -> handle exceptions in main
         // Step 2: Discussion: why and when would you declare exceptions? when not?
+        try {
+            app.task5_readFile("/file.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public static void task1_throws_null_pointer_exception(){
