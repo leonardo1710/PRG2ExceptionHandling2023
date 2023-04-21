@@ -17,17 +17,17 @@ public class App {
 
         /* Task 3 */
         // Step 1: inside task3_handle_multiple_exceptions() handle possible exception cases using a multi-catch block
-        // Step 2: Discussion: which catch blocks are executed and why?
-        app.task3_handle_multiple_exceptions();
+        // Step 2: inside main call task3_handle_multiple_exceptions() with different array_size and divisor values
+        // Step 3: Discussion: which catch blocks are executed and why?
 
         /* Task 4 */
-        // Step 1: Uncomment task4_readFile() function and fix its errors by using Try-Catch-Finally Blocks. Afterwards call task4_readFile("file.txt") in main method
+        // Step 1: Uncomment task4_readFile() function and fix its errors by using Try-Catch-Finally Blocks. Afterwards call task4_readFile("/file.txt") in main method
         // Step 2: Discussion: which statement belongs in which block and why?
 
 
         /* Task 5 */
         // Step 1: Uncomment task5_readFile function. Instead of handling checked exceptions with try/catch declare possible exceptions in method signature
-        // Step 2: Call task5_readFile("file.txt") in main method -> handle exceptions in main
+        // Step 2: Call task5_readFile("/file.txt") in main method -> handle exceptions in main
         // Step 2: Discussion: why and when would you declare exceptions? when not?
     }
 
@@ -49,11 +49,11 @@ public class App {
         return task2_throws_arithmetic_exception();
     }
 
-    public void task3_handle_multiple_exceptions(){
+    public void task3_handle_multiple_exceptions(int array_size, int divisor){
         // Task 3: handle possible exception cases using a multi-catch block
-        int a[]=new int[5];
-        a[5]=30/0;
-        System.out.println(a[10]);
+        int a[]=new int[array_size];
+        a[5]=30/divisor;
+        System.out.println("result: " + a[5]);
     }
 
     /*
